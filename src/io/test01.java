@@ -17,10 +17,25 @@ import java.util.HashMap;
 * */
 public class test01 {
     public static void main(String[] args) throws IOException {
+
+
+
+
+
+
+
         //1:创建对象
-        FileOutputStream fos = new FileOutputStream("a.txt");
+        //参数可以是路径也可以是File对象
+        FileOutputStream fos = new FileOutputStream("a.txt");//如果文件不存在则创建文件,但父级路径要存在
+
         //2:写出数据
         fos.write(97);
-        fos.close();
+        //如果文件已经存在,构造方法会清空文件
+        //参数为整数则在文件中以ASCII码形式写入例如97写入的是a
+
+        fos.close();//释放资源
+        //每次使用后都要释放资源
+        //不释放资源就相当于java会一直打开文件,占着文件,导致文件不能被其他程序使用
+
     }
 }
