@@ -18,12 +18,6 @@ import java.util.HashMap;
 public class test01 {
     public static void main(String[] args) throws IOException {
 
-
-
-
-
-
-
         //1:创建对象
         //参数可以是路径也可以是File对象
         FileOutputStream fos = new FileOutputStream("a.txt");//如果文件不存在则创建文件,但父级路径要存在
